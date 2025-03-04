@@ -183,3 +183,36 @@ Logs in an existing user.
 
 - `email`: A valid email address.
 - `password`: A string with a minimum length of 6 characters.
+
+
+## API Endpoints
+
+### Get User Profile
+
+**URL:** `/users/profile`
+
+**Method:** `GET`
+
+**Auth required:** Yes
+
+**Permissions required:** None
+
+**Description:** Retrieves the authenticated user's profile information.
+
+**Request Headers:**
+- `Authorization: Bearer <token>` (if using header for token)
+
+**Response:**
+
+- **Status:** `200 OK`
+- **Body:**
+  ```json
+  {
+    "user": {
+      "_id": "user_id",
+      "firstname": "First Name",
+      "lastname": "Last Name",
+      "email": "user@example.com",
+      // other user fields
+    }
+  }
