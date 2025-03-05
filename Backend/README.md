@@ -216,3 +216,34 @@ Logs in an existing user.
       // other user fields
     }
   }
+
+
+### Register Captain
+
+**URL:** `/captains/register`
+
+**Method:** `POST`
+
+**Auth required:** No
+
+**Permissions required:** None
+
+**Description:** Registers a new captain with the provided details.
+
+**Request Body:**
+```json
+{
+  "fullname": {
+    "firstname": "First Name",
+    "lastname": "Last Name"
+  },
+  "email": "captain@example.com",
+  "password": "password123",
+  "vehicle": {
+    "color": "Red",
+    "plate": "ABC123",
+    "capacity": 4,
+    "vehicleType": "car"
+  }
+}
+
